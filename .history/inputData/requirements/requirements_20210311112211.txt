@@ -2,4 +2,3 @@ websocket-client
 requests
 pyyaml
 Flask
-gunicorn

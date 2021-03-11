@@ -4,7 +4,7 @@ FROM python:3.7-slim
 
 # Allow statements and log messages to immediately appear in the Knative logs
 ENV PYTHONUNBUFFERED True
-ENV APP_HOME /home
+ENV APP_HOME /app
 WORKDIR $APP_HOME
 
 # Create required directories and set workdir.
@@ -27,7 +27,7 @@ ENV PORT 8000
 # # Define the default command to run when starting the container.
 # # This command keeps the container running as because the websocket is being
 # # kept open.
-ENTRYPOINT [ "nohup", "python", "/home/scripts/start.py", "&" ]
+# ENTRYPOINT [ "nohup", "python", "/home/scripts/start.py", "&" ]
 
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.

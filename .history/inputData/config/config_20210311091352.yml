@@ -24,7 +24,7 @@
 apic_login:
   address: "sandboxapicdc.cisco.com"
   username: "admin"
-  password: "ciscopsdt"
+  password: "ciscoposdt"
 
 ##### Monitored MO Settings #####
 # This part of the configuration contains the MOs which are supposed to be 
@@ -77,19 +77,11 @@ monitored_objects:
 data_output:
   # toFile:
   #   baseFilename: "testOutput"
-  # toRest:
-  #   ssl: True
-  #   destAddress: "webhook.site/d0c74fbb-dfc2-4c57-93eb-0c5c14fbbd1f"
-  #   destPort: "443"       
-    # username: "testrestuser"                     (optional)
-    # password: "4noth3r-secure-p@ssw0rd"          (optional)
   toRest:
     ssl: False
-    destAddress: "nodered-service-dev.mminnen.svc.cluster.local"
-    destPort: "1880"
-  # toRest:
-  #   ssl: True
-  #   destAddress: "webhook.site/d0c74fbb-dfc2-4c57-93eb-0c5c14fbbd1f"
-  #   destPort: "443"  
+    destAddress: "map.mvp.ia4.eu/mminnen/dev/receive_webhook"
+    destPort: "443"                             (optional)
+    # username: "testrestuser"                     (optional)
+    # password: "4noth3r-secure-p@ssw0rd"          (optional)
 
 ...
